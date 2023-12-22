@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>碳源机理建模</title>
+    <link href="/2023/11/06/%E7%A2%B3%E6%BA%90%E6%9C%BA%E7%90%86%E5%BB%BA%E6%A8%A1/"/>
+    <url>/2023/11/06/%E7%A2%B3%E6%BA%90%E6%9C%BA%E7%90%86%E5%BB%BA%E6%A8%A1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="微生物生长"><a href="#微生物生长" class="headerlink" title="微生物生长"></a>微生物生长</h2><p>微生物生长系统涉及元素转移、电子和能量流动的三重交错关系。在此基础上，微生物生长可视为以化学计量（产率）、动力学（速率）和热力学（吉布斯自由能）为特征的化学反应。</p><h2 id="微生物生长数学模型"><a href="#微生物生长数学模型" class="headerlink" title="微生物生长数学模型"></a>微生物生长数学模型</h2><h3 id="现有的定量性数模"><a href="#现有的定量性数模" class="headerlink" title="现有的定量性数模"></a>现有的定量性数模</h3><ul><li>ASM1-3 活性污泥模型</li><li>ADM 厌氧消化模型</li><li>生物膜和颗粒污泥模型</li></ul><h3 id="模型中的生物质"><a href="#模型中的生物质" class="headerlink" title="模型中的生物质"></a>模型中的生物质</h3><ul><li>普通异养生物 OHOs</li><li>自养硝化生物 ANOs</li><li>反硝化异养生物 DHOs</li><li>厌氧氨氧化生物 AMOs</li><li>聚磷酸盐积累生物 PAOs</li><li>糖原积累生物 GAOs</li></ul><p>过程模拟基于生长化学计量、生物能学、热力学、动力学构建</p><h3 id="微生物的营养结构"><a href="#微生物的营养结构" class="headerlink" title="微生物的营养结构"></a>微生物的营养结构</h3><p>微生物可分为：化能营养型和光能营养型</p><p>自养生物：利用无机碳源，可通过固定二氧化碳来产生自己的有机碳源</p><p>异养菌：在有机物上不能自给自足，需使用外部有机碳源进行生物质合成</p><h3 id="微生物生理学"><a href="#微生物生理学" class="headerlink" title="微生物生理学"></a>微生物生理学</h3><p>生物生长速率取决于温度和 pH 值，公式见 P24</p><h3 id="微生物生长反应的一般化学计量"><a href="#微生物生长反应的一般化学计量" class="headerlink" title="微生物生长反应的一般化学计量"></a>微生物生长反应的一般化学计量</h3><p>方程见 P36 式 2.1</p><p>化学计量系数（$Y_{i&#x2F;X}$）表示每摩尔底物产生的生物量（$mol_i&#x2F;mol_X$）</p><h2 id="污水特性"><a href="#污水特性" class="headerlink" title="污水特性"></a>污水特性</h2><h3 id="污水动力学特性"><a href="#污水动力学特性" class="headerlink" title="污水动力学特性"></a>污水动力学特性</h3><p>污水流量：单位时间（d&#x2F;h&#x2F;s）流过的污水体积</p><h3 id="污水组分"><a href="#污水组分" class="headerlink" title="污水组分"></a>污水组分</h3><ul><li>S：可溶性组分</li><li>C：胶体</li><li>X：颗粒物</li></ul><h3 id="污水中的有机物"><a href="#污水中的有机物" class="headerlink" title="污水中的有机物"></a>污水中的有机物</h3><p>以 COD 表示</p><p>分类方法 1：</p><ul><li>可生物降解性 COD</li><li>不可生物降解性 COD</li></ul><p>分类方法 2：</p><ul><li>可溶性有机物</li><li>颗粒状有机物（可用挥发性悬浮物 VSS 表示）</li></ul><h3 id="COD"><a href="#COD" class="headerlink" title="COD"></a>COD</h3><p><strong>S：可溶性组分；X：颗粒物</strong><br><strong>_S：可生物降解；_U：不可生物降解</strong></p><ul><li>$S_S$ 可生物降解溶解性有机物（易于生物降解）</li><li>$S_U$ 不可生物降解溶解性有机物</li><li>$X_S$ 可生物降解颗粒有机物（缓慢生物降解）</li><li>$X_U$ 不可生物降解颗粒有机物</li></ul><p>理想污水生物处理过程：<br>所有可降解的 COD$\rightarrow$异养生物生长的生物量<br>所有不可降解的颗粒 COD$\rightarrow$沉降于污泥中</p><p>理想状态下，出水中不含有任何颗粒有机物，仅含不可生物降解的可溶性 COD</p><h3 id="N"><a href="#N" class="headerlink" title="N"></a>N</h3><h3 id="P"><a href="#P" class="headerlink" title="P"></a>P</h3><h2 id="有机物-COD-去除"><a href="#有机物-COD-去除" class="headerlink" title="有机物 COD 去除"></a>有机物 COD 去除</h2><p>在生物反应器中，可生物降解的有机质（无论可溶&#x2F;不可沉淀&#x2F;可沉淀）$\rightarrow$ 普通异养生物（$OHO_s$），这些异养生物会成为反应器中有机（可挥发性）悬浮固体（VSS）的一部分</p><h3 id="反应器内系统"><a href="#反应器内系统" class="headerlink" title="反应器内系统"></a>反应器内系统</h3><h4 id="反应器-VSS-量"><a href="#反应器-VSS-量" class="headerlink" title="反应器 VSS 量"></a>反应器 VSS 量</h4><h4 id="反应器-ISS-量"><a href="#反应器-ISS-量" class="headerlink" title="反应器 ISS 量"></a>反应器 ISS 量</h4><h4 id="反应器-TSS-量"><a href="#反应器-TSS-量" class="headerlink" title="反应器 TSS 量"></a>反应器 TSS 量</h4><h4 id="碳需氧量"><a href="#碳需氧量" class="headerlink" title="碳需氧量"></a>碳需氧量</h4><h2 id="脱氮"><a href="#脱氮" class="headerlink" title="脱氮"></a>脱氮</h2><h2 id="除磷"><a href="#除磷" class="headerlink" title="除磷"></a>除磷</h2><hr><h2 id="MLE系统"><a href="#MLE系统" class="headerlink" title="MLE系统"></a>MLE系统</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目</category>
+      
+      <category>智慧水务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字孪生</tag>
+      
+      <tag>智慧水务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>基于AAO工艺的碳源投加模型</title>
+    <link href="/2023/09/30/%E5%9F%BA%E4%BA%8EAAO%E5%B7%A5%E8%89%BA%E7%9A%84%E7%A2%B3%E6%BA%90%E6%8A%95%E5%8A%A0%E6%A8%A1%E5%9E%8B/"/>
+    <url>/2023/09/30/%E5%9F%BA%E4%BA%8EAAO%E5%B7%A5%E8%89%BA%E7%9A%84%E7%A2%B3%E6%BA%90%E6%8A%95%E5%8A%A0%E6%A8%A1%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>任务目标是研究AAO工艺下的碳源投加模型，并将不同的碳源对应的模型汇总到公模型库中</p></blockquote><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目</category>
+      
+      <category>智慧水务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字孪生</tag>
+      
+      <tag>智慧水务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>动态系统的建模与分析</title>
+    <link href="/2023/09/23/%E5%8A%A8%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+    <url>/2023/09/23/%E5%8A%A8%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%88%86%E6%9E%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="如何解决一个控制系统问题？"><a href="#如何解决一个控制系统问题？" class="headerlink" title="如何解决一个控制系统问题？"></a>如何解决一个控制系统问题？</h2><ul><li>对系统进行<strong>数学建模</strong></li><li>针对模型设计控制器</li><li>搭建测试平台（以更新模型）</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>主流污水处理工艺</title>
+    <link href="/2023/09/05/%E4%B8%BB%E6%B5%81%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86%E5%B7%A5%E8%89%BA/"/>
+    <url>/2023/09/05/%E4%B8%BB%E6%B5%81%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86%E5%B7%A5%E8%89%BA/</url>
+    
+    <content type="html"><![CDATA[<h2 id="主流污水处理工艺流程"><a href="#主流污水处理工艺流程" class="headerlink" title="主流污水处理工艺流程"></a>主流污水处理工艺流程</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905143901.png" alt="主流污水处理工艺"></p><h2 id="生物膜法"><a href="#生物膜法" class="headerlink" title="生物膜法"></a>生物膜法</h2><p>早于活性污泥法，通过附着在载体上的生物膜对污染物去除，无需二沉池</p><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905144257.png" alt="生物膜"></p><h2 id="活性污泥法"><a href="#活性污泥法" class="headerlink" title="活性污泥法"></a>活性污泥法</h2><h3 id="什么是活性污泥？"><a href="#什么是活性污泥？" class="headerlink" title="什么是活性污泥？"></a>什么是活性污泥？</h3><h3 id="典型活性污泥法"><a href="#典型活性污泥法" class="headerlink" title="典型活性污泥法"></a>典型活性污泥法</h3><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909150111.png" alt="典型活性污泥法"></p><p>典型的活性污泥法是由曝气池、沉淀池、污泥回流系统和剩余污泥排除系统组成，主要去除有机物，利用微<br>生物增殖吸收 N、P 起到了少量的脱氮除磷效果，经典的比例是 BOD:N:P&#x3D;100:5:1</p><p>$$<br>\mathrm{C}<em>{6} \mathrm{H}</em>{12} \mathrm{O}<em>{6}+\mathrm{O}</em>{2}+\mathrm{NH}<em>{3}+\mathrm{PO}</em>{4} \rightarrow \mathrm{C}<em>{5} \mathrm{H}</em>{7} \mathrm{NO}<em>{2} \mathrm{P}</em>{1 &#x2F; 12}+\mathrm{CO}<em>{2}+\mathrm{H}</em>{2} \mathrm{O}<br>$$</p><h2 id="AAO-工艺"><a href="#AAO-工艺" class="headerlink" title="AAO 工艺"></a>AAO 工艺</h2><ul><li>Anaerobic 厌氧</li><li>Anoxic 缺氧</li><li>Oxic 好氧</li></ul><p>AAO 具有良好的同步强化生物脱氮除磷效果，在全世界得到广泛的应用，是现代最经典的污水处理工艺之一。</p><p>AAO 代表的反应机理也就是等同于主流市政污水生化反应机理，可以说了解了 AAO 就了解了常规生化的 90%。</p><h3 id="涉及哪些微生物？"><a href="#涉及哪些微生物？" class="headerlink" title="涉及哪些微生物？"></a>涉及哪些微生物？</h3><ul><li><strong>好氧菌</strong></li><li><strong>厌氧菌</strong></li><li><strong>硝化菌</strong></li><li><strong>反硝化菌</strong></li><li><strong>聚磷菌</strong></li></ul><h2 id="常规生物脱氮完整过程"><a href="#常规生物脱氮完整过程" class="headerlink" title="常规生物脱氮完整过程"></a>常规生物脱氮完整过程</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909163144.png" alt="常规生物脱氮完整过程"></p><h3 id="生物脱氮-——-氨化反应"><a href="#生物脱氮-——-氨化反应" class="headerlink" title="生物脱氮 —— 氨化反应"></a>生物脱氮 —— 氨化反应</h3><p>氨化作用就是微生物通过自身代谢活动降解有机氮化物转变为无机氨氮的过程，又可称为脱氨基作用。</p><p>大多数细菌（包括放线菌）和真菌都能分解有机氮产生 NH-N，其中既有好氧菌也有厌氧菌，而氨化能力强的又被称为氨化微生物。</p><p>水解 $\mathrm{RCHNH}<em>{2} \mathrm{COOH}+\mathrm{H}</em>{2} \mathrm{O} \rightarrow \mathrm{RCOHCOOH}+\mathrm{NH}_{3}$</p><p>氧化分解 $\mathrm{RCHNH}<em>{2} \mathrm{COOH}+\mathrm{O}</em>{2} \rightarrow \mathrm{RCOCOOH}+\mathrm{CO}<em>{2}+\mathrm{NH}</em>{3}$</p><p>特点：<strong>在化粪池、管网、生化池等厌、缺、好氧段都可进行</strong></p><h3 id="生物脱氮-——-硝化反应（好氧池）"><a href="#生物脱氮-——-硝化反应（好氧池）" class="headerlink" title="生物脱氮 —— 硝化反应（好氧池）"></a>生物脱氮 —— 硝化反应（好氧池）</h3><p>硝化反应即利用污水中的<strong>硝化细菌</strong>将<strong>氨氮</strong>转化为<strong>硝酸盐</strong>，该反应需要<strong>消耗碱度</strong>。</p><h4 id="硝化细菌的特点"><a href="#硝化细菌的特点" class="headerlink" title="硝化细菌的特点"></a>硝化细菌的特点</h4><ul><li>都是革兰氏阴性、无芽抱的短杆菌和球菌</li><li>强烈好氧，不能在酸性条件下生长</li><li>无需有机物，以无机含氮化合物为能源，以无机碳 (CO 或 HCO) 为碳源化能自养型</li><li>生长缓慢，世代时间长</li></ul><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909154650.png" alt="硝化细菌"></p><p>注意：<strong>硝化细菌活性污泥中的丰度一般在 1%~10%</strong></p><h4 id="过程-1：氨氧化"><a href="#过程-1：氨氧化" class="headerlink" title="过程 1：氨氧化"></a>过程 1：氨氧化</h4><p>$$<br>\mathrm{NH}<em>{4}^{+}+1.5 \mathrm{O}</em>{2} \stackrel{\text { 亚硝化菌 }}{\longrightarrow} \mathrm{NO}<em>{2}^{-}+2 \mathrm{H}^{+}+\mathrm{H}</em>{2} \mathrm{O}<br>$$</p><p>亚硝化 1g 氨氮耗氧 3.43 克，消耗碱度，限速因素</p><h4 id="过程-2：亚硝氧化"><a href="#过程-2：亚硝氧化" class="headerlink" title="过程 2：亚硝氧化"></a>过程 2：亚硝氧化</h4><p>$$<br>\mathrm{NO}<em>{2}^{-}+0.5 \mathrm{O}</em>{2} \stackrel{\text { 硝化细菌 }}{\longrightarrow} \mathrm{NO}_{3}^{-}<br>$$</p><p>硝化 1g 亚硝酸盐耗氧 1.14 克，不消耗碱度</p><h4 id="过程-1-2：硝化反应"><a href="#过程-1-2：硝化反应" class="headerlink" title="过程 1+2：硝化反应"></a>过程 1+2：硝化反应</h4><p>$$<br>\mathrm{NH}<em>{4}^{+}+2 \mathrm{O}</em>{2} \rightarrow \mathrm{NO}<em>{3}^{-}+\mathrm{H}</em>{2} \mathrm{O}+2 \mathrm{H}^{+}<br>$$</p><p>完整的硝化反应 1g 氨氮耗氧 4.57 克</p><h4 id="过程-3：碱度消耗"><a href="#过程-3：碱度消耗" class="headerlink" title="过程 3：碱度消耗"></a>过程 3：碱度消耗</h4><p>$$<br>\mathrm{NH}<em>{4}^{+} \longrightarrow 2 \mathrm{H}^{+}+\mathrm{CaCO}</em>{3} \stackrel{\text { 碱度中和 }}{\longrightarrow} \mathrm{Ca}^{2+}+\mathrm{H}<em>{2} \mathrm{O}+\mathrm{CO}</em>{2}<br>$$</p><p>硝化反应消耗碱度 7.14g （以碳酸钙计）</p><h3 id="硝化反应影响因素"><a href="#硝化反应影响因素" class="headerlink" title="硝化反应影响因素"></a>硝化反应影响因素</h3><h4 id="有机碳源"><a href="#有机碳源" class="headerlink" title="有机碳源"></a>有机碳源</h4><p>硝化菌是<strong>自养型细菌</strong>，如果污水中的碳源 BOD 浓度过高，就会使增殖速度较高的<strong>异养型细菌</strong>迅速繁殖，<strong>与硝化菌争夺氧气</strong>，从而使自养型的硝化菌得不到优势而不能成为优占种属，严重影响硝化反应的进行。</p><p>因此应保持污水厂的低有机负荷，也就是高浓度的进水一定要对应高浓度的污泥浓度，在生物反应池内保持一个低的有机负荷从而有利于硝化菌的生长繁殖，达到处理氨氮的效果。</p><h4 id="污泥龄"><a href="#污泥龄" class="headerlink" title="污泥龄"></a>污泥龄</h4><p>污泥龄是保证微生物在污水处理系统中的停留时间，即系统的污泥龄应大于硝化菌的最小世代时间。</p><p>一般污水厂为了保证硝化反应的充分进行，污泥龄应大于 <strong>10d</strong>。</p><h4 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h4><p>温度不但影响硝化菌的比增长速率，而且影响硝化菌的活性。</p><p>在 10~30℃的范围内，温度的每升高 10℃硝化的反应速率加快一倍。</p><h4 id="pH-值"><a href="#pH-值" class="headerlink" title="pH 值"></a>pH 值</h4><p>最佳 pH 值范围内为 7.5~8.5，当 pH 值低于 7 时，硝化速率明显降低，低于 6 和高于 9.6 时，硝化反应将停止进行。</p><h4 id="溶解氧（DO）"><a href="#溶解氧（DO）" class="headerlink" title="溶解氧（DO）"></a>溶解氧（DO）</h4><p>硝化反应过程中的第一步和第二步都是有氧参与的，所以污水厂的生物反应池内溶解氧的高低必将影响硝化的进程。</p><p>反应池内的硝化反应的溶解氧浓度≥2mg&#x2F;L。</p><h4 id="有毒有害物质"><a href="#有毒有害物质" class="headerlink" title="有毒有害物质"></a>有毒有害物质</h4><p>一般情况下，有毒物质主要抑制亚硝酸菌的生长，个别物质主要抑制硝酸菌的生长。</p><h3 id="生物脱氮-——-反硝化反应（缺氧池）"><a href="#生物脱氮-——-反硝化反应（缺氧池）" class="headerlink" title="生物脱氮 —— 反硝化反应（缺氧池）"></a>生物脱氮 —— 反硝化反应（缺氧池）</h3><p>反硝化反应过程：在缺氧条件下，<strong>反硝化菌</strong>以<strong>有机碳源</strong>为电子供体，将硝化反应中产生的<strong>亚硝酸盐和硝酸盐</strong>还原为<strong>氮气</strong>，该反应会<strong>产生碱度</strong>。</p><p>注意：<strong>反硝化反应必须在缺氧条件下进行</strong>，因为反硝化细菌是<strong>兼性缺氧型微生物</strong>，若有分子态氧存在（即 DO），则会分解为有机物，不会反硝化。</p><h4 id="反硝化反应影响因素"><a href="#反硝化反应影响因素" class="headerlink" title="反硝化反应影响因素"></a>反硝化反应影响因素</h4><ul><li>碳源种类与碳源量（C&#x2F;N 比）</li><li>DO（溶解氧）</li><li>温度</li><li>pH</li><li>有毒有害物质</li></ul><h2 id="生物除磷"><a href="#生物除磷" class="headerlink" title="生物除磷"></a>生物除磷</h2><h3 id="厌氧"><a href="#厌氧" class="headerlink" title="厌氧"></a>厌氧</h3><p>污水中大分子有机物经微生物的发酵作用降解为如丙酸或乙酸等挥发性脂肪酸 (VFAs)，此时，聚磷菌 (PAO) 为了吸收 VFAs，需要将胞内贮存的糖原和多聚磷酸盐 (poly-P) 分解以提供能量和还原力 NADH，然后以聚轻基脂肪酸酷 (PHAs) 形式将 VFAS 储存。聚磷的分解首先引起聚磷菌胞内磷酸盐浓度升高，随着磷酸盐释放到胞外继而导致污水中 TP 浓度迅速升高。</p><h3 id="好氧"><a href="#好氧" class="headerlink" title="好氧"></a>好氧</h3><p>进入好氧环境后，聚磷菌会利用体内储备的 PHAS 作为电子供体以溶解氧为电子受体，通过氧化分解 PHAs 等内源碳源为繁殖代谢活动提供能量，合成糖原，同时污水中的磷酸盐被聚磷菌超量吸收形成聚磷颗粒贮存在胞内，这种行为导致聚磷菌吸收的磷达到其细胞干重的 6%，甚至是 8%左右，远远超过微生物代谢生长的需要。</p><p>注意：<strong>通过排放富磷剩余污泥，TP 以有机磷的形式从物料守恒中“消失”</strong></p><h2 id="标准-AAO-反应器"><a href="#标准-AAO-反应器" class="headerlink" title="标准 AAO 反应器"></a>标准 AAO 反应器</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909164630.png" alt="标准 AAO 反应器"></p><h3 id="问-1：为什么反硝化区在硝化区（曝气池）的前面？"><a href="#问-1：为什么反硝化区在硝化区（曝气池）的前面？" class="headerlink" title="问 1：为什么反硝化区在硝化区（曝气池）的前面？"></a>问 1：为什么反硝化区在硝化区（曝气池）的前面？</h3><p>因为硝化区（好氧曝气池）内的各种微生物对碳源的消耗非常大，顺序相反会导致<strong>反硝化细菌没有充足的碳源</strong>。</p><h3 id="问-2：内回流有什么作用？"><a href="#问-2：内回流有什么作用？" class="headerlink" title="问 2：内回流有什么作用？"></a>问 2：内回流有什么作用？</h3><p>把经过硝化区（好氧曝气池）含有大量硝酸盐氮的混合液，通过水泵等方式直接回流反硝化区，为反硝化区<strong>提供充足的硝酸盐氮</strong>。</p><h2 id="实际的-AAO-反应器"><a href="#实际的-AAO-反应器" class="headerlink" title="实际的 AAO 反应器"></a>实际的 AAO 反应器</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909165723.png" alt="实际 AAO 反应器"></p><p>注意：<strong>污水的生物处理一定是水、气、泥的三者的一个动态平衡，当任何一个参数发生改变的时候，一定要及时采取措施保证其他两个参数及时配合，这样才能保证整个出水的稳定达标。</strong></p><h2 id="碳源"><a href="#碳源" class="headerlink" title="碳源"></a>碳源</h2><p>碳源构成微生物细胞碳水化合物中碳架的营养物质，供给微生物生长发育所需能量。<strong>含有碳元素</strong>且能被微生物生长繁殖所利用的一类<strong>营养物质</strong>统称为碳源。</p><p>因污水中自带无机碳源及曝气会补充无机碳源（CO2），在实际生产中并不需要投加无机碳源，污水处理中所称的碳源为<strong>有机碳源</strong>！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目</category>
+      
+      <category>智慧水务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字孪生</tag>
+      
+      <tag>智慧水务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>污染物指标解析</title>
+    <link href="/2023/09/05/%E6%B1%A1%E6%9F%93%E7%89%A9%E6%8C%87%E6%A0%87%E8%A7%A3%E6%9E%90/"/>
+    <url>/2023/09/05/%E6%B1%A1%E6%9F%93%E7%89%A9%E6%8C%87%E6%A0%87%E8%A7%A3%E6%9E%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="碳-C"><a href="#碳-C" class="headerlink" title="碳 $ C $"></a>碳 $ C $</h2><h3 id="化学需氧量-COD-（Chemical-Oxygen-Demand）"><a href="#化学需氧量-COD-（Chemical-Oxygen-Demand）" class="headerlink" title="化学需氧量 $ COD $（Chemical Oxygen Demand）"></a>化学需氧量 $ COD $（Chemical Oxygen Demand）</h3><p>是指在一定严格的条件下，水中的还原性物质在<strong>外加的强氧化剂</strong>（重铬酸钾）的作用下，被氧化分解时所消耗氧化剂的数量，以氧的 mg／L 表示。化学需氧量反映了水中受还原性物质污染的程度，这些物质包括<strong>有机物</strong>、亚硝酸盐、亚铁盐、硫化物等，但一般水及废水中无机还原性物质的数量相对不大，而被有机物污染是很普遍的，因此，<strong>COD 可作为有机物质相对含量的一项综合性指标</strong>。</p><h3 id="五日生化需氧量-BOD-5"><a href="#五日生化需氧量-BOD-5" class="headerlink" title="五日生化需氧量 $ {BOD}_5 $"></a>五日生化需氧量 $ {BOD}_5 $</h3><p>它说明水中有机物由于<strong>微生物</strong>的生化作用进行氧化分解，使之无机化或气体化时所消耗水中溶解氧的总数量，以氧的 mg／L 表示。其值越高说明水中可被微生物降解的有机污染物质越多，污染也就越严重。为了使检测资料有可比性，一般规定一个时间周期，在这段时间内，在一定温度下用水样培养微生物，并测定水中溶解氧消耗情况，一般采用五天时间，称为五日生化需氧量。</p><h3 id="污水生化性-B-C"><a href="#污水生化性-B-C" class="headerlink" title="污水生化性 $ B&#x2F;C $"></a>污水生化性 $ B&#x2F;C $</h3><p>$$ B&#x2F;C&#x3D;{BOD}_5 &#x2F; COD $$</p><ul><li>小于 0.25，难生化</li><li>0.25 ~ 0.5，可生化</li><li>大于 0.5，易生化</li></ul><h3 id="BOD-5-与-BOD"><a href="#BOD-5-与-BOD" class="headerlink" title="${BOD}_5$与$BOD$"></a>${BOD}_5$与$BOD$</h3><p>污水中各种有机物得到完会氧化分解的时间约一百天，为了缩短检测时间，一般生化需氧量以被检验的水样在 20℃下，五天内的耗氧量为代表，称其为五日生化需氧量，简称 BOD5，研究表明生活污水 BOD5 约等于完全氧化分解耗氧量的 68％</p><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905120035.png" alt="COD 组成"></p><h2 id="氮-N"><a href="#氮-N" class="headerlink" title="氮 $N$"></a>氮 $N$</h2><h3 id="总氮-TN-凯氏氮-硝态氮"><a href="#总氮-TN-凯氏氮-硝态氮" class="headerlink" title="总氮 TN &#x3D; 凯氏氮 + 硝态氮"></a>总氮 TN &#x3D; 凯氏氮 + 硝态氮</h3><h4 id="凯氏氮-有机氮-氨氮"><a href="#凯氏氮-有机氮-氨氮" class="headerlink" title="凯氏氮 &#x3D; 有机氮+氨氮"></a>凯氏氮 &#x3D; 有机氮+氨氮</h4><h4 id="有机氮"><a href="#有机氮" class="headerlink" title="有机氮"></a>有机氮</h4><p>尿素、氨基酸、蛋白质、核酸、尿酸、脂肪胺、有机碱、氨基糖等含氮有机物，可溶性有机氮主要以尿素和蛋白质形式存在，它可以通过氨化等作用转换为氨氮</p><h4 id="氨氮"><a href="#氨氮" class="headerlink" title="氨氮"></a>氨氮</h4><p>两种存在形式：</p><ul><li><strong>离子态</strong> NH4＋-N（pH＜7）</li><li><strong>分子态</strong> NH3（pH＞11，<strong>危害</strong>是前者的几十倍）</li></ul><p>注意：<strong>氨氮是污水氮素污染的主要形式，占总氮的75％左右</strong></p><h4 id="硝态氮-亚酸盐氮-硝酸盐氮"><a href="#硝态氮-亚酸盐氮-硝酸盐氮" class="headerlink" title="硝态氮&#x3D;亚酸盐氮+硝酸盐氮"></a>硝态氮&#x3D;亚酸盐氮+硝酸盐氮</h4><h3 id="进水碳氮比-C-N"><a href="#进水碳氮比-C-N" class="headerlink" title="进水碳氮比 $ C&#x2F;N $"></a>进水碳氮比 $ C&#x2F;N $</h3><p>$$<br>C&#x2F;N &#x3D; {BOD}_5&#x2F;TN<br>$$</p><h2 id="磷-P"><a href="#磷-P" class="headerlink" title="磷 $P$"></a>磷 $P$</h2><h3 id="无机磷"><a href="#无机磷" class="headerlink" title="无机磷"></a>无机磷</h3><p>以各种磷酸盐形式存在</p><h3 id="有机磷"><a href="#有机磷" class="headerlink" title="有机磷"></a>有机磷</h3><p>大多是有机磷农药</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目</category>
+      
+      <category>智慧水务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字孪生</tag>
+      
+      <tag>智慧水务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>初识数字孪生-智慧水务项目</title>
+    <link href="/2023/09/05/%E5%88%9D%E8%AF%86%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F-%E6%99%BA%E6%85%A7%E6%B0%B4%E5%8A%A1%E9%A1%B9%E7%9B%AE/"/>
+    <url>/2023/09/05/%E5%88%9D%E8%AF%86%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F-%E6%99%BA%E6%85%A7%E6%B0%B4%E5%8A%A1%E9%A1%B9%E7%9B%AE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>研一接触的第一个横向项目，希望可以学到些东西吧！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目</category>
+      
+      <category>智慧水务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字孪生</tag>
+      
+      <tag>智慧水务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>WSL-指南</title>
+    <link href="/2023/08/22/WSL-%E6%8C%87%E5%8D%97/"/>
+    <url>/2023/08/22/WSL-%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h3 id="updatedb太慢"><a href="#updatedb太慢" class="headerlink" title="updatedb太慢"></a><code>updatedb</code>太慢</h3><p>将&#x2F;mnt 添加到 &#x2F;etc&#x2F;updatedb.conf 中的 PRUNEPATHS 以避免索引 Windows 文件</p><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230822110144.png" alt="20230822110144"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>视觉SLAM十四讲-Ch6-非线性优化</title>
+    <link href="/2023/08/15/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch6-%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/"/>
+    <url>/2023/08/15/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch6-%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<p>$$<br>P\left(\boldsymbol{z}<em>{j, k} \mid \boldsymbol{x}</em>{k}, \boldsymbol{y}<em>{j}\right)&#x3D;N\left(h\left(\boldsymbol{y}</em>{j}, \boldsymbol{x}<em>{k}\right), \boldsymbol{Q}</em>{k, j}\right)<br>$$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>视觉 SLAM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>视觉 SLAM</tag>
+      
+      <tag>视觉 SLAM 十四讲</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>视觉 SLAM 十四讲-Ch3-三维空间刚体运动</title>
+    <link href="/2023/08/06/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch3-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/"/>
+    <url>/2023/08/06/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch3-%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8/</url>
+    
+    <content type="html"><![CDATA[<p>$SO_n$：特殊正交群（n 维旋转矩阵的集合）</p><p>$SO_3$：三维空间的旋转</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>视觉 SLAM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>视觉 SLAM</tag>
+      
+      <tag>视觉 SLAM 十四讲</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CMake-指南</title>
+    <link href="/2023/08/06/CMake-%E6%8C%87%E5%8D%97/"/>
+    <url>/2023/08/06/CMake-%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="CMakeLists-基本语法格式"><a href="#CMakeLists-基本语法格式" class="headerlink" title="CMakeLists 基本语法格式"></a>CMakeLists 基本语法格式</h2><h3 id="指令-参数1-参数2-…"><a href="#指令-参数1-参数2-…" class="headerlink" title="指令(参数1 参数2 …)"></a>指令(参数1 参数2 …)</h3><ul><li>参数使用<strong>括弧</strong>括起</li><li>参数之间使用<strong>空格</strong>或<strong>分号</strong>分开</li><li>指令与大小写无关, 参数和变量与大小写相关</li><li>变量使用${ }方式取值, 但在IF控制语句中是直接使用变量名</li></ul><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(HELLO hello.cpp)  <span class="hljs-comment"># 设置HELLO变量, 值为hello.cpp</span><br><span class="hljs-keyword">add_executable</span>(hello main.cpp hello.cpp)<br><span class="hljs-keyword">ADD_EXECUTABLE</span>(hello main.cpp <span class="hljs-variable">$&#123;HELLO&#125;</span>)<br></code></pre></td></tr></table></figure><h2 id="CMake重要指令"><a href="#CMake重要指令" class="headerlink" title="CMake重要指令"></a>CMake重要指令</h2><p><code>cmake_minimum_required</code>: 指定CMake的最小版本要求</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">cmake_minimum_required</span>(VERSION versionNumber [FATAL_ERROR])<br><br><span class="hljs-comment"># CMake最小版本要求为2.8.3</span><br><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">2.8</span>.<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure><p><code>project</code>: 定义工程名称，并可指定工程支持的语言</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">project</span>(projectname [CXX] [C] [Java])<br><br><span class="hljs-comment"># 指定工程名为HELLOWORLD</span><br><span class="hljs-keyword">project</span>(HELLOWORLD)<br></code></pre></td></tr></table></figure><p><code>set</code>: 显式的定义变量</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">set</span>(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]])<br><br><span class="hljs-comment"># 定义SRC变量，其值为sayhello.cpp hello.cpp</span><br><span class="hljs-keyword">set</span>(SRC sayhello.cpp hello.cpp)<br></code></pre></td></tr></table></figure><p><code>include_directories</code>: 向工程添加多个特定的头文件搜索路径 —&gt;相当于指定 g++ 编译器的 -I 参数</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">include_directories</span>([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)<br><br><span class="hljs-comment"># 将/usr/include/myincludefolder 和 ./include 添加到头文件搜索路径</span><br><span class="hljs-keyword">include_directories</span>(/usr/<span class="hljs-keyword">include</span>/myincludefolder ./<span class="hljs-keyword">include</span>)<br></code></pre></td></tr></table></figure><p><code>link_directories</code>: 向工程添加多个特定的库文件搜索路径 —&gt;相当于指定g++编译器的-L参数</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">link_directories</span>(dir1 dir2 ...)<br><br><span class="hljs-comment"># 将/usr/lib/mylibfolder 和 ./lib 添加到库文件搜索路径</span><br><span class="hljs-keyword">link_directories</span>(/usr/lib/mylibfolder ./lib)<br></code></pre></td></tr></table></figure><p><code>add_library</code>: 生成库文件</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">add_library</span>(libname [SHARED|STATIC|MODULE] [EXCLUDE_FROM_ALL] source1 source2 ... sourceN)<br><br><span class="hljs-comment"># 通过变量 SRC 生成 libhello.so 共享库</span><br><span class="hljs-keyword">add_library</span>(hello SHARED <span class="hljs-variable">$&#123;SRC&#125;</span>)<br></code></pre></td></tr></table></figure><p><code>add_compile_options</code>: 添加编译参数</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">add_compile_options</span>(<br><br><span class="hljs-comment"># 添加编译参数 -wall -std=c++11 -o2</span><br><span class="hljs-keyword">add_compile_options</span>(-wall -std=c++<span class="hljs-number">11</span> -o2)<br></code></pre></td></tr></table></figure><p><code>add_executable</code>: 生成可执行文件</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">add_executable</span>(exename source1 source2 ... sourceN)<br><br><span class="hljs-comment"># 编译main.cpp生成可执行文件main</span><br><span class="hljs-keyword">add_executable</span>(main main.cpp)<br></code></pre></td></tr></table></figure><p><code>target_link_libraries</code>: 为 target 添加需要链接的共享库 —&gt;相同于指定g++编译器-l参数</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">target_link_libraries</span>(<span class="hljs-keyword">target</span> library1&lt;debug | optimized&gt; library2...)<br><br><span class="hljs-comment"># 将hello动态库文件链接到可执行文件main</span><br><span class="hljs-keyword">target_link_libraries</span>(main hello)<br></code></pre></td></tr></table></figure><p><code>add_subdirectory</code>: 向当前工程添加存放源文件的子目录，并可以指定中间二进制和目标二进制存放的位置</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">add_subdirectory</span>(source_dir [binary_dir] [EXCLUDE_FROM_ALL])<br><br><span class="hljs-comment"># 添加src子目录，src中需有一个CMakeLists.txt</span><br><span class="hljs-keyword">add_subdirectory</span>(src)<br></code></pre></td></tr></table></figure><p><code>aux_source_directory</code>: 发现一个目录下所有的源代码文件并将列表存储在一个变量中，这个指令临时被用来自动构建源文件列表</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 语法</span><br><span class="hljs-keyword">aux_source_directory</span>(dir VARIABLE)<br><br><span class="hljs-comment"># 定义SRC变量，其值为当前目录下所有的源代码文件</span><br><span class="hljs-keyword">aux_source_directory</span>(. SRC)<br><span class="hljs-comment"># 编译SRC变量所代表的源代码文件，生成main可执行文件</span><br><span class="hljs-keyword">add_executable</span>(main <span class="hljs-variable">$&#123;SRC&#125;</span>)<br></code></pre></td></tr></table></figure><h2 id="CMake常用变量"><a href="#CMake常用变量" class="headerlink" title="CMake常用变量"></a>CMake常用变量</h2><p><code>CMAKE_C_FLAGS</code>: gcc编译选项</p><p><code>CMAKE_CXX_FLAGS</code>: g++编译选项</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 在CMAKE_CXX_FLAGS编译选项后追加-std=c++11</span><br><span class="hljs-keyword">set</span>( CMAKE_CXX_FLAGS <span class="hljs-string">&quot;$&#123;CMAKE_CXX_FLAGS&#125; -std=c++11&quot;</span>)<br></code></pre></td></tr></table></figure><p><code>CMAKE_BUILD_TYPE</code>: 编译类型(Debug, Release)</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 设定编译类型为debug，调试时需要选择debug</span><br><span class="hljs-keyword">set</span>(CMAKE_BUILD_TYPE Debug)<br><span class="hljs-comment"># 设定编译类型为release，发布时需要选择release</span><br><span class="hljs-keyword">set</span>(CMAKE_BUILD_TYPE Release)<br></code></pre></td></tr></table></figure><p>相同含义的变量</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cmake">CMAKE_BINARY_DIR 和 PROJECT_BINARY_DIR 和 _BINARY_DIR<br><span class="hljs-comment"># 这三个变量指代的内容是一致的。</span><br><span class="hljs-comment"># 如果是 in source build，指的就是工程顶层目录。</span><br><span class="hljs-comment"># 如果是 out-of-source 编译,指的是工程编译发生的目录。</span><br><span class="hljs-comment"># PROJECT_BINARY_DIR 跟其他指令稍有区别，不过现在，你可以理解为他们是一致的。</span><br><br>CMAKE_SOURCE_DIR 和 PROJECT_SOURCE_DIR 和 _SOURCE_DIR<br><span class="hljs-comment"># 这三个变量指代的内容是一致的,不论采用何种编译方式,都是工程顶层目录。</span><br><span class="hljs-comment"># 也就是在 in source build时,他跟 CMAKE_BINARY_DIR 等变量一致。</span><br><span class="hljs-comment"># PROJECT_SOURCE_DIR 跟其他指令稍有区别,现在,你可以理解为他们是一致的。</span><br></code></pre></td></tr></table></figure><ul><li>CMAKE_C_COMPILER：指定C编译器</li><li>CMAKE_CXX_COMPILER：指定C++编译器</li><li>EXECUTABLE_OUTPUT_PATH：可执行文件输出的存放路径</li><li>LIBRARY_OUTPUT_PATH：库文件输出的存放路径</li></ul><h2 id="CMake编译工程"><a href="#CMake编译工程" class="headerlink" title="CMake编译工程"></a>CMake编译工程</h2><p>CMake目录结构：项目主目录存在一个CMakeLists.txt文件</p><p><strong>两种方式设置编译规则：</strong></p><ol><li>包含源文件的子文件夹<em>包含</em>CMakeLists.txt文件，主目录的CMakeLists.txt通过add_subdirectory添加子目录即可；</li><li>包含源文件的子文件夹<em>未包含</em>CMakeLists.txt文件，子目录编译规则体现在主目录的CMakeLists.txt中；</li></ol><h3 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h3><p>在 linux 平台下使用 CMake 构建C&#x2F;C++工程的流程如下:</p><ul><li><strong>手动编写 CMakeLists.txt</strong></li><li><strong>执行命令 cmake PATH 生成 Makefile ( PATH 是顶层CMakeLists.txt 所在的目录 )</strong></li><li><strong>执行命令make 进行编译</strong></li></ul><h3 id="两种构建方式"><a href="#两种构建方式" class="headerlink" title="两种构建方式"></a>两种构建方式</h3><ul><li>内部构建(in-source build): 不推荐<ul><li>内部构建会在同级目录下产生一大堆中间文件，这些中间文件并不是我们最终所需要的，和工程源文件放在一起会显得杂乱无章。<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment">## 内部构建</span><br><span class="hljs-comment"># 在当前目录下，编译本目录的CMakeLists.txt，生成Makefile和其他文件</span><br>cmake .<br><span class="hljs-comment"># 执行make命令，生成target</span><br>make<br></code></pre></td></tr></table></figure></li></ul></li><li><strong>外部构建</strong>(out-of-source build): <strong>推荐</strong><ul><li>将编译输出文件与源文件放到不同目录中</li></ul></li></ul><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment">## 外部构建</span><br><span class="hljs-comment"># 1. 在当前目录下，创建build文件夹</span><br>mkdir build<br><span class="hljs-comment"># 2. 进入到build文件夹</span><br>cd build<br><span class="hljs-comment"># 3. 编译上级目录的CMakeLists.txt，生成Makefile和其他文件</span><br>cmake ..<br><span class="hljs-comment"># 4. 执行make命令，生成target</span><br>make<br></code></pre></td></tr></table></figure><h2 id="实战-CMake代码实践"><a href="#实战-CMake代码实践" class="headerlink" title="(实战)CMake代码实践"></a>(实战)CMake代码实践</h2><h3 id="最小CMake工程"><a href="#最小CMake工程" class="headerlink" title="最小CMake工程"></a>最小CMake工程</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># Set the minimum version of CMake that can be used</span><br><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.0</span>)<br><br><span class="hljs-comment"># Set the project name</span><br><span class="hljs-keyword">project</span> (HELLO)<br><br><span class="hljs-comment"># Add an executable</span><br><span class="hljs-keyword">add_executable</span>(hello_cmake main.cpp)<br></code></pre></td></tr></table></figure><h3 id="多目录工程-直接编译"><a href="#多目录工程-直接编译" class="headerlink" title="多目录工程 - 直接编译"></a>多目录工程 - 直接编译</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># Set the minimum version of CMake that can be used</span><br><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.0</span>)<br><br><span class="hljs-comment">#project name</span><br><span class="hljs-keyword">project</span>(SWAP)<br><br><span class="hljs-comment">#head file pat</span><br><span class="hljs-keyword">include_directories</span>( <span class="hljs-keyword">include</span> )<br><br><span class="hljs-comment">#source directory files to var</span><br><span class="hljs-keyword">add_subdirectory</span>( src DIR_SRCS )<br><br><span class="hljs-comment">#add executable file</span><br><span class="hljs-keyword">add_executable</span>(swap_02 <span class="hljs-variable">$&#123;TEST_MATH&#125;</span>)<br><br><span class="hljs-comment">#add link library</span><br><span class="hljs-keyword">target_link_libraries</span>(<span class="hljs-variable">$&#123;FS_BUILD_BINARY_PREFIX&#125;</span>sqrt <span class="hljs-variable">$&#123;LIBRARIES&#125;</span>)<br></code></pre></td></tr></table></figure><h3 id="多目录工程-生成库编译"><a href="#多目录工程-生成库编译" class="headerlink" title="多目录工程 - 生成库编译"></a>多目录工程 - 生成库编译</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># Set the minimum version of CMake that can be used</span><br><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.0</span>)<br><br><span class="hljs-comment">#project name</span><br><span class="hljs-keyword">project</span>(SWAP_LIBRARY)<br><br><span class="hljs-comment">#add compile options</span><br><span class="hljs-keyword">add_compile_options</span>(<span class="hljs-string">&quot;-Wall -std=c++11&quot;</span>)<br><br><span class="hljs-comment">#set CMAKE_BUILD_TYPE</span><br><span class="hljs-keyword">set</span>( CMAKE_BUILD_TYPE Debug )<br><br><span class="hljs-comment"># set output binary path</span><br><span class="hljs-keyword">set</span>(EXECUTABLE_OUTPUT_PATH <span class="hljs-variable">$&#123;PROJECT_BINARY_DIR&#125;</span>/bin)<br><br><span class="hljs-comment">############################################################</span><br><span class="hljs-comment"># Create a library</span><br><span class="hljs-comment">############################################################</span><br><br><span class="hljs-comment">#Generate the static library from the library sources</span><br><span class="hljs-keyword">add_library</span>( swap_library STATIC src/Swap.cpp )<br><span class="hljs-keyword">target_include_directories</span>( swap_lib PUBLIC <span class="hljs-variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/<span class="hljs-keyword">include</span> )<br><br><span class="hljs-comment">############################################################</span><br><span class="hljs-comment"># Create an executable</span><br><span class="hljs-comment">############################################################</span><br><br><span class="hljs-comment"># Add an executable with the above sources</span><br><span class="hljs-keyword">add_executable</span>( swap_01 main.cpp )<br><br><span class="hljs-comment"># link the new swap_01 target with the swap_lib target</span><br><span class="hljs-keyword">target_link_libraries</span>( swap_01 swap_liby )<br></code></pre></td></tr></table></figure><h2 id="VSCode完整项目开发"><a href="#VSCode完整项目开发" class="headerlink" title="VSCode完整项目开发"></a>VSCode完整项目开发</h2><h2 id="静态库和动态库"><a href="#静态库和动态库" class="headerlink" title="静态库和动态库"></a>静态库和动态库</h2><p>静态库和动态库的最大区别是，静态库链接的时候把库直接加载到程序中，而动态库链接的时候，它只是保留接口，将动态库与程序代码独立，这样就可以提高代码的可复用度和降低程序的耦合度。<br>静态库在程序编译时会被连接到目标代码中，程序运行时将不再需要该静态库。<br>动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入，因此在程序运行时还需要动态库存在。  </p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Git 使用指南</title>
+    <link href="/2023/08/06/Git-%E6%8C%87%E5%8D%97/"/>
+    <url>/2023/08/06/Git-%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init                     <span class="hljs-comment"># 初始化git生成git仓库</span><br>git status                   <span class="hljs-comment"># 查看git状态</span><br>git add &lt;filename&gt;           <span class="hljs-comment"># 添加某个文件到暂存区(文件将由红色-&gt;绿色), filename为某个文件名</span><br>git add .                    <span class="hljs-comment"># 将所有文件添加到暂存区</span><br>git commit -m <span class="hljs-string">&quot;代码提交信息&quot;</span>   <span class="hljs-comment"># 提交本次变更</span><br>git <span class="hljs-built_in">log</span>                      <span class="hljs-comment"># 查看日志(退出按&#x27;q&#x27;)</span><br>git reset &lt;filename&gt;         <span class="hljs-comment"># 将已经加入到暂存区但还未commit提交的文件拉回(文件将由绿色-&gt;红色)</span><br></code></pre></td></tr></table></figure><h2 id="文件状态"><a href="#文件状态" class="headerlink" title="文件状态"></a>文件状态</h2><ul><li><strong>Untracked</strong>: 新建的文件</li><li><strong>Unmodified</strong>: commit后的文件(是否变更是将仓库文件与现有文件进行对比)</li><li><strong>Modified</strong>: 当unmodified的文件被修改</li><li><strong>Staged</strong>: add后的文件</li></ul><p><img src="https://images.olioolii.xyz/20230114120730.png" alt="Git文件状态"></p><h2 id="Git自定义命令"><a href="#Git自定义命令" class="headerlink" title="Git自定义命令"></a>Git自定义命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">[<span class="hljs-built_in">alias</span>]<br>    ad = add .<br>    cmm = commit -m<br>    lg = <span class="hljs-built_in">log</span><br>    rlg = reflog<br>    co = checkout<br>    cob = checkout -b<br>    cod = checkout develop<br>    com = checkout master<br>    <span class="hljs-built_in">fc</span> = fetch<br>    cm = commit<br>    st = status<br>    pl = pull<br>    ps = push<br></code></pre></td></tr></table></figure><h2 id="回退版本"><a href="#回退版本" class="headerlink" title="回退版本"></a>回退版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset &lt;commitID&gt; <span class="hljs-comment">#回退到指定版本(commitID为对应提交的哈希值, 取前7位即可)</span><br>--hard           <span class="hljs-comment">#将工作区和暂存区都改变为指定版本内容  </span><br>--soft           <span class="hljs-comment">#工作区不变，暂存区不变  </span><br>--mixed          <span class="hljs-comment">#工作区不变，暂存区改变为指定版本内容(默认)</span><br></code></pre></td></tr></table></figure><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout -b &lt;name&gt; &lt;template&gt; <span class="hljs-comment">#创建新的分支</span><br><span class="hljs-comment"># &lt;name&gt;分支名</span><br><span class="hljs-comment"># &lt;template&gt;指以哪个分支/commit为模板, 会继承模板分支的所有commit记录, 但后续操作不影响模板分支, 不填则以当前分支为模板. 若分支不在本地而是在远程仓库, 则需用origin &lt;template&gt;</span><br>git checkout master               <span class="hljs-comment">#切回master分支</span><br>git branch                        <span class="hljs-comment">#查看所有分支(本地)</span><br>git checkout &lt;branchName&gt;         <span class="hljs-comment">#切换到某个分支, branchName为分支名</span><br>git merge &lt;branchName&gt;            <span class="hljs-comment">#合并分支变更, 注意是分支的变更而不是分支的内容</span><br></code></pre></td></tr></table></figure><h2 id="远程仓库GitHub工作流"><a href="#远程仓库GitHub工作流" class="headerlink" title="远程仓库GitHub工作流"></a>远程仓库GitHub工作流</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> XXX                                 <span class="hljs-comment">#将远程仓库下载至本地</span><br>git checkout -b &lt;branchName&gt;                  <span class="hljs-comment">#创建新的分支</span><br>git push --set-upstream origin &lt;branchName&gt;   <span class="hljs-comment">#将远程仓库的&lt;branchName&gt;分支作为本地&lt;branchName&gt;分支的上流分支</span><br><span class="hljs-comment"># --set-upstream指设置上流分支, origin指远程仓库, 这样就可以在远程仓库新增一个&lt;branchName&gt;分支</span><br><span class="hljs-comment">#若分支是本地新切的则需要进行该操作, 后续commit可直接使用git push推送至远端</span><br>git fetch                                     <span class="hljs-comment">#拉取远程仓库信息(后续再从远程切分支)</span><br>git pull                                      <span class="hljs-comment">#先fetch再自动merge, 将上流分支变更的部分合并到本地分支(若远程仓库的分支有变更)</span><br></code></pre></td></tr></table></figure><h2 id="Rebase变基"><a href="#Rebase变基" class="headerlink" title="Rebase变基"></a>Rebase变基</h2><ol><li>master分支commit记录: 1-2</li><li>以master为模板创建bc分支: 1-2</li><li>bc分支提交commit记录: 1-2-3-4</li><li>master分支提交commit记录: 1-2-5</li><li>想要bc分支继承master新的变更: 1-2-5-3-4</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git rebase master     <span class="hljs-comment">#变基</span><br>git rebase --<span class="hljs-built_in">continue</span> <span class="hljs-comment">#继续下一个commit节点的rebase</span><br></code></pre></td></tr></table></figure><h2 id="gitignore文件"><a href="#gitignore文件" class="headerlink" title=".gitignore文件"></a>.gitignore文件</h2><p>有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等, 在主目录下建立”.gitignore”文件，此文件有如下规则：</p><ol><li>忽略文件中的空行或以井号（#）开始的行将会被忽略。</li><li>可以使用Linux通配符。例如：星号（<code>*</code>）代表任意多个字符，问号（？）代表一个字符，方括号（<code>[abc]</code>）代表可选字符范围，大括号（{string1,string2,…}）代表可选的字符串等。</li><li>如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略。</li><li>如果名称的最前面是一个路径分隔符（&#x2F;），表示要忽略的文件在此目录下，而子目录中的文件不忽略。</li><li>如果名称的最后面是一个路径分隔符（&#x2F;），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++">*.txt     <span class="hljs-comment">// 忽略所有 .txt结尾的文件,这样的话上传就不会被选中！</span><br>!lib.txt  <span class="hljs-comment">// 但lib.txt除外</span><br>/temp     <span class="hljs-comment">// 仅忽略项目根目录下的TODO文件,不包括其它目录temp</span><br>build/    <span class="hljs-comment">// 忽略build/目录下的所有文件</span><br>doc<span class="hljs-comment">/*.txt // 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt</span><br></code></pre></td></tr></table></figure><h2 id="gitkeep文件"><a href="#gitkeep文件" class="headerlink" title=".gitkeep文件"></a>.gitkeep文件</h2><p>用于上传空文件夹</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>视觉 SLAM 十四讲-Ch4-李群与李代数</title>
+    <link href="/2023/08/05/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch4-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/"/>
+    <url>/2023/08/05/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch4-%E6%9D%8E%E7%BE%A4%E4%B8%8E%E6%9D%8E%E4%BB%A3%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p>SO(3) 与 so(3) 对应关系</p><ul><li>指数映射：$\boldsymbol {R}&#x3D;exp(\phi^\wedge)$（李代数-&gt;李群）</li><li>对数映射：$\phi&#x3D;(ln{\boldsymbol {R}})^{\vee}$（李群-&gt;李代数）</li></ul><p>BCH 公式：<br>$$<br>\ln \left(\exp \left(\phi_{1}^{\wedge}\right) \exp \left(\phi_{2}^{\wedge}\right)\right)^{\vee} \approx\left{\begin{array}{ll}\boldsymbol{J}<em>{l}\left(\boldsymbol{\phi}</em>{2}\right)^{-1} \phi_{1}+\phi_{2} &amp; \text { 当 } \phi_{1} \text { 为小量 } \\boldsymbol{J}<em>{r}\left(\boldsymbol{\phi}</em>{1}\right)^{-1} \phi_{2}+\phi_{1} &amp; \text { 当 } \phi_{2} \text { 为小量 }\end{array}\right.<br>$$</p><p>$$<br>\exp \left(\Delta \phi^{\wedge}\right) \exp \left(\phi^{\wedge}\right)&#x3D;\exp \left(\left(\phi+J_{l}^{-1}(\phi) \Delta \phi\right)^{\wedge}\right)<br>$$</p><p>$$<br>\exp \left((\phi+\Delta \phi)^{\wedge}\right)&#x3D;\exp \left(\left(\boldsymbol{J}<em>{l} \Delta \boldsymbol{\phi}\right)^{\wedge}\right) \exp \left(\boldsymbol{\phi}^{\wedge}\right)&#x3D;\exp \left(\boldsymbol{\phi}^{\wedge}\right) \exp \left(\left(\boldsymbol{J}</em>{r} \Delta \boldsymbol{\phi}\right)^{\wedge}\right)<br>$$</p><p>李代数求导：<br>$$<br>\begin{aligned}<br>\frac{\partial\left(\exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}\right)}{\partial \boldsymbol{\phi}} &amp; &#x3D;\lim <em>{\delta \boldsymbol{\phi} \rightarrow \mathbf{0}} \frac{\exp \left((\boldsymbol{\phi}+\delta \phi)^{\wedge}\right) \boldsymbol{p}-\exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}}{\delta \boldsymbol{\phi}} \<br>&amp; &#x3D;\lim <em>{\delta \boldsymbol{\phi} \rightarrow \mathbf{0}} \frac{\exp \left(\left(\boldsymbol{J}</em>{l} \delta \boldsymbol{\phi}\right)^{\wedge}\right) \exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}-\exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}}{\delta \boldsymbol{\phi}} \<br>&amp; &#x3D;\lim <em>{\delta \boldsymbol{\phi} \rightarrow \mathbf{0}} \frac{\left(\boldsymbol{I}+\left(\boldsymbol{J}</em>{l} \delta \boldsymbol{\phi}\right)^{\wedge}\right) \exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}-\exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}}{\delta \boldsymbol{\phi}} \<br>&amp; &#x3D;\lim <em>{\delta \boldsymbol{\phi} \rightarrow \mathbf{0}} \frac{\left(\boldsymbol{J}</em>{l} \delta \boldsymbol{\phi}\right)^{\wedge} \exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}}{\delta \boldsymbol{\phi}} \<br>&amp; &#x3D;\lim <em>{\delta \boldsymbol{\phi} \rightarrow \mathbf{0}} \frac{-\left(\exp \left(\boldsymbol{\phi}^{\wedge}\right) \boldsymbol{p}\right)^{\wedge} \boldsymbol{J}</em>{l} \delta \boldsymbol{\phi}}{\delta \boldsymbol{\phi}}&#x3D;-(\boldsymbol{R} \boldsymbol{p})^{\wedge} \boldsymbol{J}</em>{l} .<br>\end{aligned}<br>$$</p><p>向量叉乘$\boldsymbol{a}\times\boldsymbol{b}$ $\Leftrightarrow$ （反对称）矩阵与向量相乘$\boldsymbol{a}^{\wedge}\boldsymbol{b}$</p><p>$\boldsymbol{a}\times\boldsymbol{b}&#x3D;-\boldsymbol{b}\times\boldsymbol{a}&#x3D;-\boldsymbol{b}^{\wedge}\boldsymbol{a}$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>视觉 SLAM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>视觉 SLAM</tag>
+      
+      <tag>视觉 SLAM 十四讲</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>视觉SLAM十四讲-Ch1-预备知识</title>
+    <link href="/2023/08/05/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch1-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
+    <url>/2023/08/05/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-Ch1-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>视觉SLAM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>视觉SLAM</tag>
+      
+      <tag>视觉SLAM十四讲</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon.jpg">
+  <link rel="icon" href="/img/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="olioolii">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="主流污水处理工艺流程 生物膜法早于活性污泥法，通过附着在载体上的生物膜对污染物去除，无需二沉池  活性污泥法什么是活性污泥？典型活性污泥法 典型的活性污泥法是由曝气池、沉淀池、污泥回流系统和剩余污泥排除系统组成，主要去除有机物，利用微生物增殖吸收 N、P 起到了少量的脱氮除磷效果，经典的比例是 BOD:N:P&#x3D;100:5:1 $$\mathrm{C}{6} \mathrm{H}{12}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="主流污水处理工艺">
+<meta property="og:url" content="https://shaojunjie0912.github.io/2023/09/05/%E4%B8%BB%E6%B5%81%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86%E5%B7%A5%E8%89%BA/index.html">
+<meta property="og:site_name" content="olioolii&#39;s blog">
+<meta property="og:description" content="主流污水处理工艺流程 生物膜法早于活性污泥法，通过附着在载体上的生物膜对污染物去除，无需二沉池  活性污泥法什么是活性污泥？典型活性污泥法 典型的活性污泥法是由曝气池、沉淀池、污泥回流系统和剩余污泥排除系统组成，主要去除有机物，利用微生物增殖吸收 N、P 起到了少量的脱氮除磷效果，经典的比例是 BOD:N:P&#x3D;100:5:1 $$\mathrm{C}{6} \mathrm{H}{12}">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905143901.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905144257.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909150111.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909163144.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909154650.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909164630.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909165723.png">
+<meta property="article:published_time" content="2023-09-05T04:23:43.000Z">
+<meta property="article:modified_time" content="2023-11-12T02:21:48.734Z">
+<meta property="article:author" content="olioolii">
+<meta property="article:tag" content="数字孪生">
+<meta property="article:tag" content="智慧水务">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905143901.png">
+  
+  
+  
+  <title>主流污水处理工艺 - olioolii&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"shaojunjie0912.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>olioolii&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/wallpaper.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="主流污水处理工艺"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-05 12:23" pubdate>
+          2023年9月5日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">主流污水处理工艺</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="主流污水处理工艺流程"><a href="#主流污水处理工艺流程" class="headerlink" title="主流污水处理工艺流程"></a>主流污水处理工艺流程</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905143901.png" srcset="/img/loading.gif" lazyload alt="主流污水处理工艺"></p>
+<h2 id="生物膜法"><a href="#生物膜法" class="headerlink" title="生物膜法"></a>生物膜法</h2><p>早于活性污泥法，通过附着在载体上的生物膜对污染物去除，无需二沉池</p>
+<p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230905144257.png" srcset="/img/loading.gif" lazyload alt="生物膜"></p>
+<h2 id="活性污泥法"><a href="#活性污泥法" class="headerlink" title="活性污泥法"></a>活性污泥法</h2><h3 id="什么是活性污泥？"><a href="#什么是活性污泥？" class="headerlink" title="什么是活性污泥？"></a>什么是活性污泥？</h3><h3 id="典型活性污泥法"><a href="#典型活性污泥法" class="headerlink" title="典型活性污泥法"></a>典型活性污泥法</h3><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909150111.png" srcset="/img/loading.gif" lazyload alt="典型活性污泥法"></p>
+<p>典型的活性污泥法是由曝气池、沉淀池、污泥回流系统和剩余污泥排除系统组成，主要去除有机物，利用微<br>生物增殖吸收 N、P 起到了少量的脱氮除磷效果，经典的比例是 BOD:N:P&#x3D;100:5:1</p>
+<p>$$<br>\mathrm{C}<em>{6} \mathrm{H}</em>{12} \mathrm{O}<em>{6}+\mathrm{O}</em>{2}+\mathrm{NH}<em>{3}+\mathrm{PO}</em>{4} \rightarrow \mathrm{C}<em>{5} \mathrm{H}</em>{7} \mathrm{NO}<em>{2} \mathrm{P}</em>{1 &#x2F; 12}+\mathrm{CO}<em>{2}+\mathrm{H}</em>{2} \mathrm{O}<br>$$</p>
+<h2 id="AAO-工艺"><a href="#AAO-工艺" class="headerlink" title="AAO 工艺"></a>AAO 工艺</h2><ul>
+<li>Anaerobic 厌氧</li>
+<li>Anoxic 缺氧</li>
+<li>Oxic 好氧</li>
+</ul>
+<p>AAO 具有良好的同步强化生物脱氮除磷效果，在全世界得到广泛的应用，是现代最经典的污水处理工艺之一。</p>
+<p>AAO 代表的反应机理也就是等同于主流市政污水生化反应机理，可以说了解了 AAO 就了解了常规生化的 90%。</p>
+<h3 id="涉及哪些微生物？"><a href="#涉及哪些微生物？" class="headerlink" title="涉及哪些微生物？"></a>涉及哪些微生物？</h3><ul>
+<li><strong>好氧菌</strong></li>
+<li><strong>厌氧菌</strong></li>
+<li><strong>硝化菌</strong></li>
+<li><strong>反硝化菌</strong></li>
+<li><strong>聚磷菌</strong></li>
+</ul>
+<h2 id="常规生物脱氮完整过程"><a href="#常规生物脱氮完整过程" class="headerlink" title="常规生物脱氮完整过程"></a>常规生物脱氮完整过程</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909163144.png" srcset="/img/loading.gif" lazyload alt="常规生物脱氮完整过程"></p>
+<h3 id="生物脱氮-——-氨化反应"><a href="#生物脱氮-——-氨化反应" class="headerlink" title="生物脱氮 —— 氨化反应"></a>生物脱氮 —— 氨化反应</h3><p>氨化作用就是微生物通过自身代谢活动降解有机氮化物转变为无机氨氮的过程，又可称为脱氨基作用。</p>
+<p>大多数细菌（包括放线菌）和真菌都能分解有机氮产生 NH-N，其中既有好氧菌也有厌氧菌，而氨化能力强的又被称为氨化微生物。</p>
+<p>水解 $\mathrm{RCHNH}<em>{2} \mathrm{COOH}+\mathrm{H}</em>{2} \mathrm{O} \rightarrow \mathrm{RCOHCOOH}+\mathrm{NH}_{3}$</p>
+<p>氧化分解 $\mathrm{RCHNH}<em>{2} \mathrm{COOH}+\mathrm{O}</em>{2} \rightarrow \mathrm{RCOCOOH}+\mathrm{CO}<em>{2}+\mathrm{NH}</em>{3}$</p>
+<p>特点：<strong>在化粪池、管网、生化池等厌、缺、好氧段都可进行</strong></p>
+<h3 id="生物脱氮-——-硝化反应（好氧池）"><a href="#生物脱氮-——-硝化反应（好氧池）" class="headerlink" title="生物脱氮 —— 硝化反应（好氧池）"></a>生物脱氮 —— 硝化反应（好氧池）</h3><p>硝化反应即利用污水中的<strong>硝化细菌</strong>将<strong>氨氮</strong>转化为<strong>硝酸盐</strong>，该反应需要<strong>消耗碱度</strong>。</p>
+<h4 id="硝化细菌的特点"><a href="#硝化细菌的特点" class="headerlink" title="硝化细菌的特点"></a>硝化细菌的特点</h4><ul>
+<li>都是革兰氏阴性、无芽抱的短杆菌和球菌</li>
+<li>强烈好氧，不能在酸性条件下生长</li>
+<li>无需有机物，以无机含氮化合物为能源，以无机碳 (CO 或 HCO) 为碳源化能自养型</li>
+<li>生长缓慢，世代时间长</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909154650.png" srcset="/img/loading.gif" lazyload alt="硝化细菌"></p>
+<p>注意：<strong>硝化细菌活性污泥中的丰度一般在 1%~10%</strong></p>
+<h4 id="过程-1：氨氧化"><a href="#过程-1：氨氧化" class="headerlink" title="过程 1：氨氧化"></a>过程 1：氨氧化</h4><p>$$<br>\mathrm{NH}<em>{4}^{+}+1.5 \mathrm{O}</em>{2} \stackrel{\text { 亚硝化菌 }}{\longrightarrow} \mathrm{NO}<em>{2}^{-}+2 \mathrm{H}^{+}+\mathrm{H}</em>{2} \mathrm{O}<br>$$</p>
+<p>亚硝化 1g 氨氮耗氧 3.43 克，消耗碱度，限速因素</p>
+<h4 id="过程-2：亚硝氧化"><a href="#过程-2：亚硝氧化" class="headerlink" title="过程 2：亚硝氧化"></a>过程 2：亚硝氧化</h4><p>$$<br>\mathrm{NO}<em>{2}^{-}+0.5 \mathrm{O}</em>{2} \stackrel{\text { 硝化细菌 }}{\longrightarrow} \mathrm{NO}_{3}^{-}<br>$$</p>
+<p>硝化 1g 亚硝酸盐耗氧 1.14 克，不消耗碱度</p>
+<h4 id="过程-1-2：硝化反应"><a href="#过程-1-2：硝化反应" class="headerlink" title="过程 1+2：硝化反应"></a>过程 1+2：硝化反应</h4><p>$$<br>\mathrm{NH}<em>{4}^{+}+2 \mathrm{O}</em>{2} \rightarrow \mathrm{NO}<em>{3}^{-}+\mathrm{H}</em>{2} \mathrm{O}+2 \mathrm{H}^{+}<br>$$</p>
+<p>完整的硝化反应 1g 氨氮耗氧 4.57 克</p>
+<h4 id="过程-3：碱度消耗"><a href="#过程-3：碱度消耗" class="headerlink" title="过程 3：碱度消耗"></a>过程 3：碱度消耗</h4><p>$$<br>\mathrm{NH}<em>{4}^{+} \longrightarrow 2 \mathrm{H}^{+}+\mathrm{CaCO}</em>{3} \stackrel{\text { 碱度中和 }}{\longrightarrow} \mathrm{Ca}^{2+}+\mathrm{H}<em>{2} \mathrm{O}+\mathrm{CO}</em>{2}<br>$$</p>
+<p>硝化反应消耗碱度 7.14g （以碳酸钙计）</p>
+<h3 id="硝化反应影响因素"><a href="#硝化反应影响因素" class="headerlink" title="硝化反应影响因素"></a>硝化反应影响因素</h3><h4 id="有机碳源"><a href="#有机碳源" class="headerlink" title="有机碳源"></a>有机碳源</h4><p>硝化菌是<strong>自养型细菌</strong>，如果污水中的碳源 BOD 浓度过高，就会使增殖速度较高的<strong>异养型细菌</strong>迅速繁殖，<strong>与硝化菌争夺氧气</strong>，从而使自养型的硝化菌得不到优势而不能成为优占种属，严重影响硝化反应的进行。</p>
+<p>因此应保持污水厂的低有机负荷，也就是高浓度的进水一定要对应高浓度的污泥浓度，在生物反应池内保持一个低的有机负荷从而有利于硝化菌的生长繁殖，达到处理氨氮的效果。</p>
+<h4 id="污泥龄"><a href="#污泥龄" class="headerlink" title="污泥龄"></a>污泥龄</h4><p>污泥龄是保证微生物在污水处理系统中的停留时间，即系统的污泥龄应大于硝化菌的最小世代时间。</p>
+<p>一般污水厂为了保证硝化反应的充分进行，污泥龄应大于 <strong>10d</strong>。</p>
+<h4 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h4><p>温度不但影响硝化菌的比增长速率，而且影响硝化菌的活性。</p>
+<p>在 10~30℃的范围内，温度的每升高 10℃硝化的反应速率加快一倍。</p>
+<h4 id="pH-值"><a href="#pH-值" class="headerlink" title="pH 值"></a>pH 值</h4><p>最佳 pH 值范围内为 7.5~8.5，当 pH 值低于 7 时，硝化速率明显降低，低于 6 和高于 9.6 时，硝化反应将停止进行。</p>
+<h4 id="溶解氧（DO）"><a href="#溶解氧（DO）" class="headerlink" title="溶解氧（DO）"></a>溶解氧（DO）</h4><p>硝化反应过程中的第一步和第二步都是有氧参与的，所以污水厂的生物反应池内溶解氧的高低必将影响硝化的进程。</p>
+<p>反应池内的硝化反应的溶解氧浓度≥2mg&#x2F;L。</p>
+<h4 id="有毒有害物质"><a href="#有毒有害物质" class="headerlink" title="有毒有害物质"></a>有毒有害物质</h4><p>一般情况下，有毒物质主要抑制亚硝酸菌的生长，个别物质主要抑制硝酸菌的生长。</p>
+<h3 id="生物脱氮-——-反硝化反应（缺氧池）"><a href="#生物脱氮-——-反硝化反应（缺氧池）" class="headerlink" title="生物脱氮 —— 反硝化反应（缺氧池）"></a>生物脱氮 —— 反硝化反应（缺氧池）</h3><p>反硝化反应过程：在缺氧条件下，<strong>反硝化菌</strong>以<strong>有机碳源</strong>为电子供体，将硝化反应中产生的<strong>亚硝酸盐和硝酸盐</strong>还原为<strong>氮气</strong>，该反应会<strong>产生碱度</strong>。</p>
+<p>注意：<strong>反硝化反应必须在缺氧条件下进行</strong>，因为反硝化细菌是<strong>兼性缺氧型微生物</strong>，若有分子态氧存在（即 DO），则会分解为有机物，不会反硝化。</p>
+<h4 id="反硝化反应影响因素"><a href="#反硝化反应影响因素" class="headerlink" title="反硝化反应影响因素"></a>反硝化反应影响因素</h4><ul>
+<li>碳源种类与碳源量（C&#x2F;N 比）</li>
+<li>DO（溶解氧）</li>
+<li>温度</li>
+<li>pH</li>
+<li>有毒有害物质</li>
+</ul>
+<h2 id="生物除磷"><a href="#生物除磷" class="headerlink" title="生物除磷"></a>生物除磷</h2><h3 id="厌氧"><a href="#厌氧" class="headerlink" title="厌氧"></a>厌氧</h3><p>污水中大分子有机物经微生物的发酵作用降解为如丙酸或乙酸等挥发性脂肪酸 (VFAs)，此时，聚磷菌 (PAO) 为了吸收 VFAs，需要将胞内贮存的糖原和多聚磷酸盐 (poly-P) 分解以提供能量和还原力 NADH，然后以聚轻基脂肪酸酷 (PHAs) 形式将 VFAS 储存。聚磷的分解首先引起聚磷菌胞内磷酸盐浓度升高，随着磷酸盐释放到胞外继而导致污水中 TP 浓度迅速升高。</p>
+<h3 id="好氧"><a href="#好氧" class="headerlink" title="好氧"></a>好氧</h3><p>进入好氧环境后，聚磷菌会利用体内储备的 PHAS 作为电子供体以溶解氧为电子受体，通过氧化分解 PHAs 等内源碳源为繁殖代谢活动提供能量，合成糖原，同时污水中的磷酸盐被聚磷菌超量吸收形成聚磷颗粒贮存在胞内，这种行为导致聚磷菌吸收的磷达到其细胞干重的 6%，甚至是 8%左右，远远超过微生物代谢生长的需要。</p>
+<p>注意：<strong>通过排放富磷剩余污泥，TP 以有机磷的形式从物料守恒中“消失”</strong></p>
+<h2 id="标准-AAO-反应器"><a href="#标准-AAO-反应器" class="headerlink" title="标准 AAO 反应器"></a>标准 AAO 反应器</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909164630.png" srcset="/img/loading.gif" lazyload alt="标准 AAO 反应器"></p>
+<h3 id="问-1：为什么反硝化区在硝化区（曝气池）的前面？"><a href="#问-1：为什么反硝化区在硝化区（曝气池）的前面？" class="headerlink" title="问 1：为什么反硝化区在硝化区（曝气池）的前面？"></a>问 1：为什么反硝化区在硝化区（曝气池）的前面？</h3><p>因为硝化区（好氧曝气池）内的各种微生物对碳源的消耗非常大，顺序相反会导致<strong>反硝化细菌没有充足的碳源</strong>。</p>
+<h3 id="问-2：内回流有什么作用？"><a href="#问-2：内回流有什么作用？" class="headerlink" title="问 2：内回流有什么作用？"></a>问 2：内回流有什么作用？</h3><p>把经过硝化区（好氧曝气池）含有大量硝酸盐氮的混合液，通过水泵等方式直接回流反硝化区，为反硝化区<strong>提供充足的硝酸盐氮</strong>。</p>
+<h2 id="实际的-AAO-反应器"><a href="#实际的-AAO-反应器" class="headerlink" title="实际的 AAO 反应器"></a>实际的 AAO 反应器</h2><p><img src="https://cdn.jsdelivr.net/gh/olioolii/blog-image/img/20230909165723.png" srcset="/img/loading.gif" lazyload alt="实际 AAO 反应器"></p>
+<p>注意：<strong>污水的生物处理一定是水、气、泥的三者的一个动态平衡，当任何一个参数发生改变的时候，一定要及时采取措施保证其他两个参数及时配合，这样才能保证整个出水的稳定达标。</strong></p>
+<h2 id="碳源"><a href="#碳源" class="headerlink" title="碳源"></a>碳源</h2><p>碳源构成微生物细胞碳水化合物中碳架的营养物质，供给微生物生长发育所需能量。<strong>含有碳元素</strong>且能被微生物生长繁殖所利用的一类<strong>营养物质</strong>统称为碳源。</p>
+<p>因污水中自带无机碳源及曝气会补充无机碳源（CO2），在实际生产中并不需要投加无机碳源，污水处理中所称的碳源为<strong>有机碳源</strong>！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="category-chain-item">项目</a>
+  
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%99%BA%E6%85%A7%E6%B0%B4%E5%8A%A1/" class="category-chain-item">智慧水务</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F/" class="print-no-link">#数字孪生</a>
+      
+        <a href="/tags/%E6%99%BA%E6%85%A7%E6%B0%B4%E5%8A%A1/" class="print-no-link">#智慧水务</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>主流污水处理工艺</div>
+      <div>https://shaojunjie0912.github.io/2023/09/05/主流污水处理工艺/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>olioolii</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/09/23/%E5%8A%A8%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%88%86%E6%9E%90/" title="动态系统的建模与分析">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">动态系统的建模与分析</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/09/05/%E6%B1%A1%E6%9F%93%E7%89%A9%E6%8C%87%E6%A0%87%E8%A7%A3%E6%9E%90/" title="污染物指标解析">
+                        <span class="hidden-mobile">污染物指标解析</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
