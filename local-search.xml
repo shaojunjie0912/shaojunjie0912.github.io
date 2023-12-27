@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>MIT-计算机教育中缺失的一课</title>
+    <link href="/2023/12/27/MIT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/"/>
+    <url>/2023/12/27/MIT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><h3 id="一些-Shell-命令"><a href="#一些-Shell-命令" class="headerlink" title="一些 Shell 命令"></a>一些 Shell 命令</h3><p><code>cd -</code>: 返回上一级目录</p><p><code>&gt;</code> 和 <code>&lt;</code>: 重定向</p><p><code>&gt;&gt;</code>: 追加</p><p><code>|</code>: 管道符，将左侧程序的输出作为右侧程序的输入</p><p><code>tail -n1</code>: 查看最后一行</p><p><code>grep</code>: 在输入流中搜索指定字符</p><h3 id="Linux-文件-目录权限"><a href="#Linux-文件-目录权限" class="headerlink" title="Linux 文件&#x2F;目录权限"></a>Linux 文件&#x2F;目录权限</h3><p>-|—|—|—：文件-&#x2F;目录d | 文件所有者设置的权限 | 拥有该文件的组设置的权限 | 其他人的权限</p><p>文件</p><ul><li>r(read): 读取</li><li>w(write): 写入</li><li>x(execute): 执行</li></ul><p>目录</p><ul><li>r(read): 查看目录中的文件</li><li>w(write): 在目录中重命名、创建或删除文件（如果只对文件拥有w权限则最多只能清空文件无法删除）</li><li>x(execute): 如果要进入目录，必须拥有该目录及其所有父目录的执行权限</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>碳源机理建模</title>
     <link href="/2023/11/06/%E7%A2%B3%E6%BA%90%E6%9C%BA%E7%90%86%E5%BB%BA%E6%A8%A1/"/>
     <url>/2023/11/06/%E7%A2%B3%E6%BA%90%E6%9C%BA%E7%90%86%E5%BB%BA%E6%A8%A1/</url>
