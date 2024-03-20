@@ -1,12 +1,15 @@
 ---
-title: Pytorch-Tutorial-01 张量
+title: Pytorch | Tutorial-01 张量
+mathjax: true
 date: 2024-03-20 14:30:31
 category:
   - Tutorial
-  - Pytorch
 tags:
-  - Deep Learning
+  - DeepLearning
+  - Pytorch
 ---
+
+> 这是对 Pytorch 官网的 Tutorial 教程的中文翻译。
 
 张量是一种特殊的数据结构，与数组和矩阵非常相似。在 PyTorch 中，我们使用张量对模型的输入和输出以及模型的参数进行编码。
 

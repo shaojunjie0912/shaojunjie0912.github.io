@@ -24,7 +24,7 @@ footerLink:
   订阅: /subscribe/
 
 post:
-  footer: sideremens eademmutato # 底部左侧 自定义信息
+  footer: For Ayanami Rei! # 底部左侧 自定义信息
   themeInfo: false # true | false  # 是否开启 底部右侧 声明本站信息
   endContent: 以上 # 当你使用了 评论功能，此配置才会生效
 
