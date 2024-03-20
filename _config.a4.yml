@@ -11,7 +11,6 @@ showInMenu:
   - 标签
   - 分类
 
-# 首页相关配置
 index:
   header:
     - "A.T.フィールド 全開！"
@@ -19,23 +18,18 @@ index:
   footer: Email:shaojunjie0912@outlook.com
   titlePosition: left # center | left  # 首页标题的位置
 
-# 底部的链接自定义
 footerLink:
-  info: © 1949-2024 China # info这个单词不能修改，不想使用可为空
-  # 友链: /friends/ # 需要hexo new page friends
-  # 联系: /contact/ # 需要hexo new page contact
-  # 支持: /support/ # 需要hexo new page support
-  # ...
+  info: © 2001-2024 ShaoJunjie
+  联系: /contact/ # 需要hexo new page contact
+  订阅: /subscribe/
 
-post: #除首页之外页面
-  footer: 🌊看过大海的人不会忘记海的广阔🌊 # 底部左侧 自定义信息
-  themeInfo: true # true | false  # 是否开启 底部右侧 声明本站信息
+post:
+  footer: sideremens eademmutato # 底部左侧 自定义信息
+  themeInfo: false # true | false  # 是否开启 底部右侧 声明本站信息
   endContent: 以上 # 当你使用了 评论功能，此配置才会生效
 
-# 相对于source目录下的头像url
 favicon: /img/avatar.JPG
 
-# 是否启用一些特色工具 false | true
 tool:
   darkMode: true # 暗黑模式
   returnToTop: true # 回到顶部按钮
@@ -73,42 +67,13 @@ color:
   linkAfterClick: "#9c9caf" # 链接点击后的颜色
 
 # A4背景引入图片
-# 图片你应该先放到 source下，下面选项的图片路径 即为 相对于 source 目录的路径
 imageShow:
   enable: false
   background: /img/favicon.webp # 最底部层背景
 
-# A4默认中文使用霞鹜文楷，如果你想关闭这种字体，首先保证enable为 true 接着可以开关对应字体
 font:
   enable: false # 是否使用字体开关功能
-  LXGWWenKai: true # 霞鹜文楷 如果关闭，中文则使用的是 思源宋体，思源宋体不提供关闭
-
-# ---------------------------------------------------------------------------------------
-# Comment plugin
-# 评论插件：需要根据教程自行部署评论服务
-# ---------------------------------------------------------------------------------------
-comment:
-  enable: false
-  use: waline # values: waline、twikoo、artalk
-
-  # Waline
-  # See: https://waline.js.org/guide/get-started.html
-  waline:
-    serverUrl: # Waline server url(vercel) example: https://example.example.com
-    lang: zh-CN # Waline language, default: zh-CN. See: https://waline.js.org/guide/client/i18n.html
-    placeholder: 留下你的评论吧。 # 评论框背景信息
-
-  # Twikoo
-  # See: https://twikoo.js.org/quick-start.html
-  twikoo:
-    envId: # 腾讯云环境填 envId；其它环境填地址
-    region: # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；其它环境不填
-    lang: # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
-
-  # Artalk
-  # See: https://artalk.js.org/guide/deploy.html
-  artalk:
-    server: # Artalk 后端地址
+  LXGWWenKai: true
 
 inject:
   css: css/custom.css
