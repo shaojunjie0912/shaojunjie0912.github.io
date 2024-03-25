@@ -28,7 +28,7 @@ post:
   themeInfo: false # true | false  # 是否开启 底部右侧 声明本站信息
   endContent: 以上 # 当你使用了 评论功能，此配置才会生效
 
-favicon: /img/avatar.JPG
+favicon: /img/avatar.png
 
 tool:
   darkMode: true # 暗黑模式

@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 一碗给力嗯的博客
+title: EVANGELION
 subtitle: ""
-description: "NNUer & HUSTer"
+description: "NNUer | HUSTer"
 keywords:
-author: 一碗给力嗯
+author: ShaoJunjie
 language: en
 timezone: ""
 
@@ -49,7 +49,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -58,7 +58,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 
 # syntax_highlighter: "shiki"
 # shiki:
@@ -122,7 +122,7 @@ mathjax:
   append_css: true # add CSS to pages rendered by MathJax
   every_page: false # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter
   packages: # extra packages to load
-  extension_options: {}
+  extension_options:
+    {}
     # you can put your extension options here
     # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
-
